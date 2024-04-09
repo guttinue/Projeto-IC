@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins';
+    background-color: rgb(34, 34, 34);
+    max-width: 2100px;
+}
+
+.flex{
+    display: flex;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* estilo do header */ 
+
+header{
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+#interface_menu{
+    display: flex;
+    justify-content: center;
+}
+
+
+li{
+    display: inline-block;
+    margin: 20px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: #FF6002;
+    transition: 0.3s all;
+}
+
+/* estilo da introdução */
+
+main{
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.titulo_introducao, .titulo_gen{
+    font-size: 30px;
+    text-align: center;
+    color: #FF6002;
+}
+
+.introducao_site .interface, .introducao_gen .interface{
+    padding: 100px;
+
+}
+.img_introducao, .img_gen{
+    display: block;
+    text-align: center;
+}
+
+.img_intro, .img_gen{
+    border-radius: 30px;
+}
+
+.txt_introducao{
+    color: white;
+    text-align: justify;   
+    padding: 40px;
+    padding-right: 30px;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.txt_gen{
+    color: white;
+    text-align: justify;   
+    padding-left: 20px;
+    padding-right: 30px;
+    justify-content: center;
+    font-size: 15px;
+}
+
+/* estilo contexto */
+
+.contexto .interface{
+    padding: 100px;
+    padding-top: 0;
+}
+
+.txt1 h2, .txt2 h2{
+    font-size: 30px;
+    color: #FF6002;
+}
+
+.txt1 p, .txt2 p{
+    color: white;
+    text-align: justify;
+    padding: 20px 200px;
+    font-size: 21px;
+}
+
+/* estilo footer */ 
+
+
+footer{
+    background-color: #FF6002;
+    padding-top: 15px;
+}
+.container{
+    width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content{
+    padding: 20px;
+}
+h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-content p{
+    width: 550px;
+    margin: auto;
+    padding: 7px;
+}
+.footer-content ul{
+    flex-direction: column;
+    text-align: center;
+}
+
+.paginas{
+    padding: 0;
+}
+.paginas li{
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+
+.paginas li::before{
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #343434;
+    transition-duration: .5s;
+}
+.paginas li:hover::before{
+    width: 70px;
+}
+
+/* fim contato */ 
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #343434;
+}
+
+.txt_footer{
+    color: white;
+    text-align: justify;
+}
+/* direitos autorais */
+
+.bottom-bar{
+    background-color: #FF6002;
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;  
+}
+
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}

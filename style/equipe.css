@@ -1,0 +1,76 @@
+.flex{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 200px;
+}
+
+.txt_equipe{
+    text-align: center;
+    display: block;
+}
+
+
+.equipe article{
+    padding: 20px;
+}
+
+/* formulário */ 
+
+form{
+    max-width: 500px;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form input, form textarea{
+    border: 1px solid #c44a04;
+    border-radius: 30px;
+    outline: 0;
+    padding: 20px 15px;
+    font-size: 18px;
+    background-color: transparent;
+    font-family: poppinsregular;
+    color: white;
+    font-family: 'Poppins';
+
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: white;
+    font-family: 'Poppins';
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+.btn_enviar{
+    margin-top: 10px; 
+    border-radius: 6px;
+}
+
+.btn_enviar button{
+    width: auto;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Poppins';
+    color: white;
+    
+}
+
+
+.btn_enviar input:hover{
+    transform: scale(1.05);
+    border-color: transparent;
+}
