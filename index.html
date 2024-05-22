@@ -13,28 +13,41 @@
         <nav class="menu">
             <ul>
                 <a href="index.html"><li>Home</li></a>
-                <a href="percursores.html"><li>Personalidades</li></a>
+                <a href="percursores.html"><li>Percursores</li></a>
                 <a href="equipe.html"><li>Equipe</li></a>
+                <a href="quiz.html">Quiz</a>
             </ul>
         </nav>
     </div>
     </header>
 
-    <main>
+<main>
 
 
         <section class="introducao_site">
-            <h2 class="titulo_introducao">Explorando a História e Evolução dos Ambientes Computacionais</h2>
-            <div class="interface">
-                <div class="flex">
-                    <div class="img_introducao">
-                        <img class="img_intro" src="componentes/img/maquina-de-turing.png" alt="Maquina de touring" width="600">
+            <div class="app">
+                <h1>Explorando a História e Evolução dos Ambientes Computacionais</h1>
+                <div class="container_slide">
+                    <div>
+                        <button id="prev-button"><img src="componentes/img/arrow.png" alt=""></button>
+                    </div>    
+                <div class="slider-container">
+                    <div class="imagens">
+                        <img src="componentes/img/computador1.jpg" alt="geração 1" class="slider on">
+                        <img src="componentes/img/computador2.jpg" alt="geração 2" class="slider">
+                        <img src="componentes/img/computador3.jpg" alt="geração 3" class="slider">
+                        <img src="componentes/img/computador4.jpg" alt="geração 4" class="slider">
                     </div>
-                    
-                    <div class="txt_introducao">
-                        <p class="txt_introducao">Atualmente, os computadores estão tão incorporados ao nosso dia a dia que muitas pessoas nem lembram como era executar alguns serviços “manualmente”. O mundo não pode ser imaginado sem o uso de máquinas que mudaram completamente a história da tecnologia. Com o desenvolvimento dos computadores, o processo de comunicação remota mudou a comunicação, permitindo que os indivíduos troquem informações rapidamente em tempo real.</p>
+                    <div class="texto">
+                        <p class="slidert on">Os primeiros computadores (décadas de 1940 e 1950) usavam válvulas eletrônicas e eram extremamente grandes e lentos. Exemplos incluem o ENIAC e o UNIVAC</p>
+                        <p class="slidert">Introduzidos nos anos 1950 e 1960, os computadores de segunda geração usavam transistores, tornando-os menores, mais rápidos e mais confiáveis que os de primeira geração.</p>
+                        <p class="slidert">Na década de 1960, os computadores de terceira geração usavam circuitos integrados, que aumentaram a velocidade e a eficiência, além de reduzir ainda mais o tamanho das máquinas</p>
+                        <p class="slidert">A partir dos anos 1970, os microprocessadores marcaram a quarta geração, possibilitando a criação de computadores pessoais compactos e acessíveis.</p>
                     </div>
-                    
+                </div>
+                    <div>
+                        <button id="next-button"><img src="componentes/img/arrow.png" alt=""></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,6 +214,8 @@
         </div>
 
     </footer>
+
+<script src="script.js"></script>
         
 </body>
 </html>
