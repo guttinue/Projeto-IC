@@ -108,15 +108,15 @@ const nextButton = document.querySelector("#next-btn");
 let currentQuestionIndex = 0;
 let score = 0; 
 
-function startQuiz(){
+function iniciarQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Próxima pergunta";
-    showQuestions();
+    mostrarQuestao();
 }
 
-function showQuestions(){
-    resetQuestions();
+function mostrarQuestao(){
+    resetarQuestao();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
@@ -126,7 +126,7 @@ function showQuestions(){
         button.innerHTML = answer.text;
         button.classList.add("btn");
         answerButtons.appendChild(button);
-        button.addEventListener("click", selectAnswer);
+        button.addEventListener("click", selecionarAlternativa);
         if(answer.correct){
             button.dataset.correct = answer.correct;
         }
@@ -134,14 +134,14 @@ function showQuestions(){
 
 }
 
-function resetQuestions(){
+function resetarQuestao(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
         answerButtons.removeChild(answerButtons.firstChild);
     };
 }
 
-function selectAnswer(Event){
+function selecionarAlternativa(Event){
     const answerClicked = Event.target;
     const isCorrect = answerClicked.dataset.correct === "true";
     if(isCorrect){
@@ -160,17 +160,17 @@ function selectAnswer(Event){
         nextButton.style.display = "block";
 }
 
-function showScore(){
-    resetQuestions();
+function mostarResultado(){
+    resetarQuestao();
     questionElement.innerHTML = "Você acertou " + score +  " de " + questions.length + "!"
     nextButton.innerHTML = "Jogar novamente"
     nextButton.style.display = "block"
 }
 
-function handleNextButton(){
+function butaoProximaPergunta(){
     currentQuestionIndex++; 
     if(currentQuestionIndex < questions.length){
-        showQuestions();
+        mostrarQuestao();
     }else{
         showScore();
     }
@@ -178,10 +178,10 @@ function handleNextButton(){
 
 nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length){
-        handleNextButton();
+        butaoProximaPergunta();
     }else{
-        startQuiz();
+        iniciarQuiz();
     }
     });
 
-startQuiz();
+iniciarQuiz();
