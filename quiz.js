@@ -172,7 +172,7 @@ function butaoProximaPergunta(){
     if(currentQuestionIndex < questions.length){
         mostrarQuestao();
     }else{
-        showScore();
+        mostarResultado();
     }
 }
 
